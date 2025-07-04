@@ -1,3 +1,8 @@
+Your task is to understand how syscall descriptions are written and
+to generate them for {subsystem_name} in the latest Linux kernel
+to increase the coverage to >= 50% with the syscall descriptions of the given C file:
+{linux_kernel_c_file_http_link}
+
 There is a project called syzkaller which uses the syscall descriptions language AKA syzlang.
 You can find the documentation of it here:
 https://github.com/google/syzkaller/blob/master/docs/syscall_descriptions.md
@@ -5,22 +10,15 @@ https://github.com/google/syzkaller/blob/master/docs/syscall_descriptions.md
 and the syntax of syzlang is here:
 https://github.com/google/syzkaller/blob/master/docs/syscall_descriptions_syntax.md.
 
-Your task is to understand how syscall descriptions are written and
-to generate them for {subsystem_name} in the latest Linux kernel.
-
-Increase the coverage to >= 50% with the syscall descriptions of the given C file:
-{linux_kernel_c_file_http_link}
-
 Use context7 MCP server to get the latest Linux kernel source code.
 
-Linux kernel {subsystem_name} documentation is here:
-{subsystem_documentation_http_link}
+Linux kernel {subsystem_name} documentation can be found within https://docs.kernel.org/.
 
 syzkaller has already syzlang for the {subsystem_name} which you need to update with the increased coverage:
 {syzkaller_syzlang_file_http_link}
 
 syzkaller's tool called "syz-manager" which requires the seed program which you can find here:
-{syzkaller_test_seed_program}
+{syzkaller_test_seed_program_http_link}
 
 You will also need to update the seed program if you update the syzlang as well.
 Note that there are rules in seed program that you can not use more than 40 calls of syscalls,

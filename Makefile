@@ -1,3 +1,9 @@
+SHELL := /bin/bash
+
 .PHONY: init
-	uv venv
-	source .venv/bin/activate
+init:
+	uv sync
+
+.PHONY: run
+run:
+	python main.py

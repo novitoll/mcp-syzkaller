@@ -17,5 +17,9 @@ mcp:
       command: "npx"
       args: ["-y", "@modelcontextprotocol/server-filesystem"]
 
+    sequential-thinking:
+      command: "npx"
+      args: ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+
 openai:
   default_model: gpt-4o
